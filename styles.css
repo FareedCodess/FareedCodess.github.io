@@ -1,0 +1,173 @@
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    flex-direction: row;
+    background: #f4f4f4;
+  }
+  
+  /* SIDE NAVIGATION */
+  .side-nav {
+    width: 260px;
+    background: #004466;
+    color: #fff;
+    height: 100vh;
+    position: fixed;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .side-nav .logo {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    font-weight: bold;
+  }
+  
+  .side-nav-links {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .side-nav-links li {
+    margin: 1.5rem 0;
+  }
+  
+  .side-nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    display: block;
+    padding: 0.7rem;
+    transition: background 0.3s;
+    border-radius: 5px;
+  }
+  
+  .side-nav-links a:hover {
+    background: #0077b6;
+  }
+  
+  /* Mobile Menu Button */
+  .menu-toggle {
+    display: none;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    text-align: center;
+  }
+  
+  /* MAIN CONTENT */
+  .main-content {
+    margin-left: 260px;
+    padding: 3rem;
+    width: calc(100% - 260px);
+    background: #fff;
+  }
+  
+  .container {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+    padding: 2rem 0;
+  }
+  
+  /* HOME SECTION */
+  .home-section {
+    background: #f0f8ff;
+    text-align: center;
+    padding: 4rem 2rem;
+  }
+  
+  .home-section h1 {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .btn {
+    background: #004466;
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 1rem;
+  }
+  
+  /* SECTION HEADINGS */
+  .section h2 {
+    text-align: left;
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+    color: #004466;
+  }
+  
+  .section p {
+    line-height: 1.6;
+  }
+  
+  /* EXPERIENCE, EDUCATION & PROJECTS */
+  .exp-item, .edu-item, .project-item {
+    margin-bottom: 2rem;
+  }
+  
+  .exp-item h3, .edu-item h3, .project-item h3 {
+    color: #222;
+    font-size: 1.5rem;
+  }
+  
+  .exp-item ul, .edu-item ul, .project-item ul {
+    margin-top: 0.5rem;
+    list-style: disc inside;
+    padding-left: 1rem;
+  }
+  
+  /* RESPONSIVE DESIGN */
+  @media (max-width: 768px) {
+    body {
+      flex-direction: column;
+    }
+  
+    /* Responsive Side Nav */
+    .side-nav {
+      width: 100%;
+      height: auto;
+      padding: 1rem;
+      text-align: center;
+    }
+  
+    .side-nav-links {
+      display: none;
+    }
+  
+    .menu-toggle {
+      display: block;
+      position: absolute;
+      top: 10px;
+      right: 15px;
+    }
+  
+    /* Adjust Content Width */
+    .main-content {
+      margin-left: 0;
+      width: 100%;
+    }
+  }
+  
+  /* Expandable Mobile Menu */
+  @media (max-width: 768px) {
+    .side-nav.open .side-nav-links {
+      display: block;
+    }
+  }
+  
